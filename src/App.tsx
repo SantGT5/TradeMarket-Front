@@ -1,5 +1,5 @@
 import "./style.scss"
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import { AuthContextComponent } from "./context/authContext"
 
@@ -19,7 +19,6 @@ export const App = () => {
             <Route path="/home" element={<Home />} />
           </Route>
         </Routes>
-        <Link to="/home">test</Link>
       </AuthContextComponent>
     </BrowserRouter>
   )

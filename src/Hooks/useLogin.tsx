@@ -12,9 +12,13 @@ import { useNavigate } from "react-router-dom"
 // Type User
 import { UserLoginType } from "../types/user.type"
 
+// Alert
+import Swal from "sweetalert2"
+
 function useLogin(params: string) {
   const navigate = useNavigate()
   const { setLoggedInUser } = React.useContext(authContext)
+  const [check, setCheck] = React.useState<boolean>(false)
   const [status, setStatus] = React.useState<UserLoginType>({
     email: "",
     password: "",
@@ -25,6 +29,10 @@ function useLogin(params: string) {
       ...status,
       [event.currentTarget.name]: event.currentTarget.value,
     })
+  }
+
+  const handleCheckbox = () => {
+    setCheck(!check)
   }
 
   async function handleSubmit(event: React.SyntheticEvent) {
@@ -38,11 +46,21 @@ function useLogin(params: string) {
 
       navigate("/home")
     } catch (err: any) {
-      console.log(err.response)
+      Swal.fire({
+        title: "Woww! 🤭",
+        text: err.response.data.msg,
+        icon: "error",
+        confirmButtonColor: "#5238ed",
+        confirmButtonText: "Try again",
+      })
+      setStatus({
+        email: "",
+        password: "",
+      })
     }
   }
 
-  return [handleChange, handleSubmit, status] as const
+  return [handleChange, handleSubmit, status, handleCheckbox, check] as const
 }
 
 export default useLogin
