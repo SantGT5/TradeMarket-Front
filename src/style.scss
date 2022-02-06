@@ -122,6 +122,19 @@ input[type="checkbox"] {
   font-size: 24px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // *** Home Page ***
 // *** NavBar ***
 
@@ -139,7 +152,15 @@ input[type="checkbox"] {
 .nav-profile {
   border: 0px;
   background-color: $white-color;
-  margin-right: 50px;
+  margin-right: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  color: $black-color;
+}
+
+.nav-home {
+  border: 0px;
+  background-color: $white-color;
   font-size: 18px;
   text-decoration: none;
   color: $black-color;
@@ -188,13 +209,15 @@ input[type="checkbox"] {
 
 
 
+// **********************************
+// **********************************
+// ******** Login Responsive ********
+// **********************************
+// **********************************
 
 
 
-
-
-
-@media (max-height: 900px) {
+@media (max-height: 895px) {
   .logo-fixed-position {
     font-size: 0px;
   }
@@ -353,5 +376,33 @@ input[type="checkbox"] {
     color: $white-color;
     font-size: 20px;
     font-weight: bolder;
+  }
+}
+
+
+// **********************************
+// **********************************
+// ********* Home Responsive ********
+// **********************************
+// **********************************
+
+
+@media (max-width: 760px) {
+  .container-navbar {
+    padding: 0px 30px;
+  }
+}
+
+
+@media (max-width: 556px) {
+  .container-navbar {
+    padding: 0px 25px;
+  }
+
+  .nav-logo {
+    font-size: 30px;
+    font-weight: $extra-bold;
+    text-decoration: none;
+    color: $ube-color;
   }
 }
