@@ -9,7 +9,7 @@ export const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="flex center login-img-container">
+      <div className="flex center login-img-container flex-direction">
         <div>
           <img className="login-img" src={loginImg} alt="Login img" />
         </div>

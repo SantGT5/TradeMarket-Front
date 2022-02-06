@@ -8,6 +8,7 @@ import PrivateRoutes from "./PrivateRouter/PrivateRoutes"
 // Routes
 import { Login } from "./components/login"
 import { Home } from "./components/home"
+import { Profile } from "./components/profile"
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
           <Route path="/" element={<Login />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
           </Route>
         </Routes>
       </AuthContextComponent>

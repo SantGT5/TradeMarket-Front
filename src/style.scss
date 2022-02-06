@@ -34,19 +34,25 @@ input {
   justify-content: center;
 }
 
-.flex-end{
-  justify-content: flex-end;
-  width: 100vw
+.center-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 
-.align-item{
+.flex-end {
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+.align-item {
   align-items: center;
 }
 
 // *** Login Page ***
 
 .login-img-container {
-  margin-top: 5em;
+  padding: 100px 50px 0px 50px;
 }
 
 .login-img {
@@ -107,7 +113,7 @@ input[type="checkbox"] {
   font-weight: bolder;
 }
 
-.logo-fixed-position{
+.logo-fixed-position {
   position: fixed;
   bottom: 30px;
   right: 40px;
@@ -119,24 +125,27 @@ input[type="checkbox"] {
 // *** Home Page ***
 // *** NavBar ***
 
-.container-navbar{
+.container-navbar {
   padding: 0px 60px;
 }
 
 .nav-logo {
-  color: $ube-color;
   font-size: 36px;
   font-weight: $extra-bold;
+  text-decoration: none;
+  color: $ube-color;
 }
 
-.nav-profile{
+.nav-profile {
   border: 0px;
   background-color: $white-color;
   margin-right: 50px;
   font-size: 18px;
+  text-decoration: none;
+  color: $black-color;
 }
 
-.nav-free-trial{
+.nav-free-trial {
   background-color: $ube-color;
   color: $white-color;
   font-size: 18px;
@@ -144,6 +153,205 @@ input[type="checkbox"] {
   padding: 10px 15px;
 }
 
-.title-home{
+.title-home {
   margin: 90px 0px 70px 0px;
+}
+
+// *** Profile Page ***
+
+.icon-profile {
+  font-size: 80px;
+  margin-top: 1em;
+}
+
+.profile-label {
+  margin: 30px 0px 5px 0px;
+  font-weight: $semi-bold;
+}
+
+.profile-btn {
+  width: 343px;
+  height: 60px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: $ube-color;
+  color: $white-color;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.profile-input {
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-height: 900px) {
+  .logo-fixed-position {
+    font-size: 0px;
+  }
+}
+
+@media (max-width: 949px) {
+  .flex-direction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-img-container {
+    padding: 50px 50px 0px 50px;
+  }
+
+  .login-img {
+    width: 350px;
+  }
+  .login-container {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 738px) {
+  .login-img-container {
+    padding: 20px 20px 0px 20px;
+  }
+
+  .login-img {
+    width: 300px;
+  }
+
+  .login-container {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 422px) {
+  .login-img-container {
+    padding: 20px 0px 0px 10px;
+  }
+
+  .login-img {
+    width: 230px;
+  }
+
+  .login-container {
+    margin-left: 0px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: $extra-bold;
+  }
+
+  .login-sub-title {
+    font-size: 15px;
+    font-weight: $regular;
+  }
+
+  .login-label-email {
+    margin: 30px 0px 5px 0px;
+    font-weight: $semi-bold;
+  }
+
+  .login-label-pass {
+    margin: 30px 0px 5px 0px;
+    font-weight: $semi-bold;
+  }
+
+  .login-input {
+    width: 220px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px 30px 0px;
+  }
+  input[type="checkbox"] {
+    -ms-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+    margin: 0px 10px 0px 2px;
+  }
+
+  .login-btn {
+    width: 264px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $ube-color;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 322px) {
+  .login-img-container {
+    padding: 10px 0px 0px 10px;
+  }
+
+  .login-img {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: $extra-bold;
+  }
+
+  .login-sub-title {
+    font-size: 12px;
+    font-weight: $semi-bold;
+  }
+
+  .login-label-email {
+    margin: 20px 0px 5px 0px;
+    font-weight: $semi-bold;
+  }
+
+  .login-label-pass {
+    margin: 20px 0px 5px 0px;
+    font-weight: $semi-bold;
+  }
+
+  .login-input {
+    width: 180px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 25px 0px 30px 0px;
+  }
+  input[type="checkbox"] {
+    -ms-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+    margin: 0px 10px 0px 2px;
+  }
+
+  .login-btn {
+    width: 224px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $ube-color;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: bolder;
+  }
 }
