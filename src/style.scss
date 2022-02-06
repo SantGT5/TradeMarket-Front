@@ -49,6 +49,11 @@ input {
   align-items: center;
 }
 
+.btn-flex-direction{
+  display: flex;
+  flex-direction: column;
+}
+
 // *** Login Page ***
 
 .login-img-container {
@@ -177,6 +182,46 @@ input[type="checkbox"] {
 .title-home {
   margin: 90px 0px 70px 0px;
 }
+
+.exhange-container{
+  margin-right: 80px;
+}
+
+.currency-name{
+  margin: 0px 0px 14px 0px;
+}
+
+.container-card{
+  background-color: #eeeeee;
+width: max-content;
+padding: 0px 0px 0px 17px;
+border-radius: 10px;
+}
+
+.btn-sell{
+  border: none;
+  border-radius: 0px 10px 0px 0px;
+  background-color: #31A071;
+  color: $white-color;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.btn-buy{
+  border: none;
+  border-radius: 0px 0px 10px 0px;
+  background-color: #FF0000;
+  color: $white-color;
+  font-size: 20px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
 
 // *** Profile Page ***
 
