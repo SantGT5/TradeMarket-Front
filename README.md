@@ -1,4 +1,4 @@
-# ### Ortex Project
+# Ortex Project
 
 ![image](https://user-images.githubusercontent.com/83282533/152755900-b26800ba-5522-42ce-b4c0-7dd6183063da.png)
 
