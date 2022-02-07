@@ -9,7 +9,8 @@ import { NavBar } from "../global/navbar"
 import useResetPass from "../Hooks/useResetPass"
 
 export const Profile = () => {
-  const [handleChange, handleSubmit, status] = useResetPass()
+  const [handleChange, handleSubmit, handleCheckbox, status, checkbox] =
+    useResetPass()
 
   return (
     <form onSubmit={handleSubmit}>
@@ -21,7 +22,7 @@ export const Profile = () => {
         <div className="center-grid">
           <Input
             label="Current password*"
-            type="text"
+            type={checkbox ? "text" : "password"}
             placeholder="Your password"
             classNameInput="profile-input"
             classNameLabel="profile-label"
@@ -31,7 +32,7 @@ export const Profile = () => {
           />
           <Input
             label="New password*"
-            type="text"
+            type={checkbox ? "text" : "password"}
             placeholder="New password"
             classNameInput="profile-input"
             classNameLabel="profile-label"
@@ -41,7 +42,7 @@ export const Profile = () => {
           />
           <Input
             label="Confirm new password*"
-            type="text"
+            type={checkbox ? "text" : "password"}
             placeholder="Confirm new password"
             classNameInput="profile-input"
             classNameLabel="profile-label"
@@ -49,6 +50,16 @@ export const Profile = () => {
             value={status.confirmPassword}
             name="confirmPassword"
           />
+          <div className="checkbox-container">
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="show-pass"
+              id="check-id"
+              onChange={handleCheckbox}
+            />
+            <label htmlFor="check-id">Show password</label>
+          </div>
           <button className="profile-btn" type="submit">
             Set password
           </button>

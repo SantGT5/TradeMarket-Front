@@ -14,6 +14,7 @@ import Swal from "sweetalert2"
 
 function useResetPass() {
   const navigate = useNavigate()
+  const [checkbox, SetCheckbox] = React.useState(false)
   const [status, setStatus] = React.useState<ResetPass>({
     currentPassword: "",
     newPassword: "",
@@ -27,12 +28,16 @@ function useResetPass() {
     })
   }
 
+  const handleCheckbox = () => {
+    SetCheckbox(!checkbox)
+  }
+
   async function handleSubmit(event: React.SyntheticEvent) {
     event.preventDefault()
     try {
       await api.post<ResetPass>("/password-reset", status)
 
-      navigate("/home")
+      navigate("/")
 
       setStatus({
         currentPassword: "",
@@ -58,7 +63,7 @@ function useResetPass() {
     }
   }
 
-  return [handleChange, handleSubmit, status] as const
+  return [handleChange, handleSubmit, handleCheckbox, status, checkbox] as const
 }
 
 export default useResetPass
