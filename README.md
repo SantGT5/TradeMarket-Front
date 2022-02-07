@@ -20,6 +20,8 @@ $ npm install
 - nodejs
 - git
 - typescript
+- Eslint (VSCode Extension)
+- Prettier (VSCode Extension)
 
 ## Available Scripts
 
