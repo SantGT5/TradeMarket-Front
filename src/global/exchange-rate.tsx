@@ -15,7 +15,6 @@ export const ExchangeRate = () => {
 
   React.useEffect(() => {
     client.onopen = () => {
-      console.log("Connection established!")
       client.send(JSON.stringify({ topic: "subscribe", to: "EURUSD:CUR" }))
       client.onmessage = function (e: any) {
         const data = JSON.parse(e.data)
@@ -34,8 +33,6 @@ export const ExchangeRate = () => {
       }
     }
   })
-
-  console.log("SOu status -> ", status)
 
   return (
     <div>

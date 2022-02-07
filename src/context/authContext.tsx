@@ -26,8 +26,6 @@ function AuthContextComponent(props: any) {
     fetchUser()
   }, [])
 
-  console.log("VALOR ATUAL DO CONTEXT =>", loggedInUser)
-
   return (
     // Making user data globally.
     <authContext.Provider value={{ loggedInUser, setLoggedInUser }}>
