@@ -8,7 +8,7 @@ const apis = {
 
 // Configure URL as default.
 const api = axios.create({
-  baseURL: apis["production"],
+  baseURL: apis["development"],
 })
 
 // Headers configuration before each request.
