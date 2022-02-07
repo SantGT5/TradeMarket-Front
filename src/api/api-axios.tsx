@@ -3,7 +3,7 @@ import axios from "axios"
 // Axios URLs
 const apis = {
   development: "http://localhost:4000",
-  production: "https://trade-market-ortex.herokuapp.com/",
+  production: "https://trade-market-ortex.herokuapp.com",
 }
 
 // Configure URL as default.
