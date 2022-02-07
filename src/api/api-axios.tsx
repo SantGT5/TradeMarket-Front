@@ -3,12 +3,12 @@ import axios from "axios"
 // Axios URLs
 const apis = {
   development: "http://localhost:4000",
-  production: "https://memoriam-app.herokuapp.com",
+  production: "https://trade-market-ortex.herokuapp.com/",
 }
 
 // Configure URL as default.
 const api = axios.create({
-  baseURL: apis["development"],
+  baseURL: apis["production"],
 })
 
 // Headers configuration before each request.
