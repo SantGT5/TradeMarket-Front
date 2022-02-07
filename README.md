@@ -1,3 +1,4 @@
+
 # Ortex Project
 
 ![image](https://user-images.githubusercontent.com/83282533/152755900-b26800ba-5522-42ce-b4c0-7dd6183063da.png)
@@ -5,6 +6,20 @@
 ## Introduction
 
 - This friendly website was create to help users fold best moment to invest in currency.
+
+# Ortex Project
+## Setup
+```
+$ git clone https://github.com/SantGT5/TradeMarket-Front.git
+$ cd project-name-frontend
+$ npm install
+```
+### Be sure you have installed:
+- npm
+- yarn
+- nodejs
+- git
+- typescript
 
 ## Available Scripts
 
