@@ -1,6 +1,11 @@
-import { NavBar } from "../global/navbar"
+// React Icons
 import { BiUser } from "react-icons/bi"
+
+// Global input
 import { Input } from "../global/input"
+import { NavBar } from "../global/navbar"
+
+// Hooks && Logics
 import useResetPass from "../Hooks/useResetPass"
 
 export const Profile = () => {

@@ -7,11 +7,13 @@ interface userLogged {
 const authContext = createContext({} as userLogged)
 
 function AuthContextComponent(props: any) {
+  // Saving user in loggedInUser
   const [loggedInUser, setLoggedInUser] = useState()
 
   useEffect(() => {
     async function fetchUser() {
       try {
+        // Saving user logged in React Context
         const storedUser = await localStorage.getItem("loggedInUser")
 
         const loggedInUser = await JSON.parse(storedUser || '""')
@@ -27,6 +29,7 @@ function AuthContextComponent(props: any) {
   console.log("VALOR ATUAL DO CONTEXT =>", loggedInUser)
 
   return (
+    // Making user data globally.
     <authContext.Provider value={{ loggedInUser, setLoggedInUser }}>
       {props.children}
     </authContext.Provider>

@@ -1,15 +1,20 @@
 import React from "react"
+
+// Axios configuration
 import api from "../api/api-axios"
 
 // Hook to access navigation object
 import { useNavigate } from "react-router-dom"
+
+// Type
+import { ResetPass } from "../types/resetpass.type"
 
 // Alert library
 import Swal from "sweetalert2"
 
 function useResetPass() {
   const navigate = useNavigate()
-  const [status, setStatus] = React.useState({
+  const [status, setStatus] = React.useState<ResetPass>({
     currentPassword: "",
     newPassword: "",
     confirmPassword: "",
@@ -25,7 +30,7 @@ function useResetPass() {
   async function handleSubmit(event: React.SyntheticEvent) {
     event.preventDefault()
     try {
-      await api.post("/password-reset", status)
+      await api.post<ResetPass>("/password-reset", status)
 
       navigate("/home")
 

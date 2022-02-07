@@ -1,13 +1,4 @@
-type InputType = {
-  label: string
-  type: string
-  placeholder: string
-  classNameInput: string
-  classNameLabel: string
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-  value: string
-  name: string
-}
+import { InputType } from "../types/input.type"
 
 export const Input = (props: InputType) => {
   return (

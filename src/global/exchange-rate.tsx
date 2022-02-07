@@ -1,12 +1,11 @@
 import React from "react"
 import { w3cwebsocket as W3CWebSocket } from "websocket"
 
-type Api = {
-  dt: string
-  price: number
-}
+// Type
+import { Api } from "../types/exchange.type"
 
 export const ExchangeRate = () => {
+  // Receiving "dt" and "price" from API
   const [status, SetStatus] = React.useState<Api>({ dt: "", price: 0 })
 
   const client = new W3CWebSocket(
@@ -21,8 +20,8 @@ export const ExchangeRate = () => {
         const data = JSON.parse(e.data)
         console.log(data)
         if (data.dt) {
+          // Convert timestamp to date
           const date = new Date(data.dt)
-
           const today =
             date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 

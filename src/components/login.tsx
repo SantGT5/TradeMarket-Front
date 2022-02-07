@@ -1,9 +1,12 @@
 // useLogin Hooks && logic
 import useLogin from "../Hooks/useLogin"
+
+// Global input
 import { Input } from "../global/input"
 import loginImg from "../assets/images/login-img.svg"
 
 export const Login = () => {
+  // Logic Hooks
   const [handleChange, handleSubmit, status, handleCheckbox, check] =
     useLogin("/login")
 
