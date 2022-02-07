@@ -7,7 +7,7 @@
 
 - This friendly website was create to help users fold best moment to invest in currency.
 
-# Ortex Project
+# Installation
 ## Setup
 ```
 $ git clone https://github.com/SantGT5/TradeMarket-Front.git
